@@ -1,0 +1,219 @@
+
+
+/* Here we set the margin and padding 0 */
+/*
+margin: 0;
+
+	padding: 0;
+}
+
+.navbar {
+	display: flex;
+
+ This is used to make the navbar sticky, So that the
+	navbar stays at the top part even if we scroll 
+	position: sticky;
+	align-items: center;
+	justify-content: center;
+	padding: var(--spacing-3) 0;
+	top: 0px;
+
+it specifies the mouse cursor to be displayed
+	when it is pointed over the element
+	cursor: pointer;
+}
+/*
+.nav-list {
+	width: 50%;
+	display: flex;
+}
+
+.nav-list li {
+	list-style: none;
+	padding: 26px 30px;
+}
+
+.nav-list li a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+
+.nav-list li a:hover {
+	color: black;
+}
+
+.rightNav {
+	width: 50%;
+	text-align: right;
+}
+
+#search {
+	padding: 5px;
+	font-size: 17px;
+	border: 2px solid rgb(52, 71, 214);
+	border-radius: 9px;
+}
+
+.background {
+	background: rgba(189, 93, 93, 0.4);
+	background-blend-mode: darken;
+	background-size: cover;
+}
+*/
+/*Added this baserd on Ada's blog*/
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+	color: var(--font-color);
+}
+
+:root { /*variables*/
+	--spacing-1: 8px;
+	--spacing-2: 12px;
+	--spacing-3: 16px;
+	--spacing-4: 24px;
+
+	--border-radius: 12px;
+
+	--font-color: #323232;
+}
+
+.heart {
+	color: red;
+}
+
+h2 {
+	/*font-family: "Proza Libre", sans-serif;*/
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	margin-bottom: var(--spacing-2);
+}
+
+body {
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	padding: 0 var(--spacing-3);
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	padding: var(--spacing-3) 0;
+}
+
+.nav-items {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	align-items: center;
+	margin: 0;
+	margin-left: auto;
+}
+.nav-item {
+	margin: var(--spacing-1);
+}
+
+.portrait { /*My picture*/
+	width: 300px;
+	border-radius: var(--border-radius);
+	flex-shrink: 0;
+}
+
+.about-me-container {
+	display: flex;
+}
+
+.about-me-text-container {
+	margin-right: var(--spacing-3);
+}
+
+.project-image {
+	width: 50%
+}
+
+.project-title h3 {
+	display: inline;
+}
+
+details {
+	cursor: pointer;
+}
+
+summary {
+	/*Here we can add a S3 bucket svg icon*/
+}
+
+footer {
+	margin-top: auto;
+	padding: var(--spacing-2) 0;
+	text-align: center;
+}
+
+section {
+	padding: var(--spacing-3);
+}
+
+.icon {
+	font-size: 2em;
+	color: var(--font-color);
+	margin: 0 var(--spacing-1);
+}
+
+a {
+	color: var(--font-color);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+#skills-container {
+	font-size: 2em;
+	width: 2em;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: var(--spacing-1);
+}
+/*
+#skills-container > * {
+	font-size: 2em;
+	width: 2em;
+	margin-top: var(--spacing-1);
+}*/
+
+@media only screen and (max-width: 600px) {
+	.about-me-container {
+		flex-direction: column;
+	}
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+.bg-image {
+	background-image: url("Background.PNG");
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+}
+
+
+
+
+
+
+
+
+
+

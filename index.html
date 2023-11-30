@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link 
+      rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+      crossorigin="anonymous">
+    <title>My Website</title>
+</head>
+<body style="background-color:#5585b5">
+    <div class="bg-image">
+        <nav>
+            <h2>Frank Gomez</h2>
+            <ul class="nav-items">
+	
+            <li class="nav-item"><a href="#AboutMe">About Me</a></li>
+            <li class="nav-item"><a href="#Projects">Projects</a></li>
+		    <li class="nav-item"><a href="#Skills">Skills</a></li>
+		    <li class="nav-item"><a href="./contact.html">Contact</a></li>
+		    <li class="nav-item"><a target="_blank" href="https://github.com/franskter1ful/">My Github</a></li>
+		    <!-- <li class="nav-item"><a href="./login.html">Login</a></li> -->
+            </ul>
+            <!-- Optional Search Bar
+            <div class="rightNav">
+                <input type="text" name="search" id="search" />
+                <button class="btn btn-sm">Search</button>
+            </div>
+            -->
+        </nav>
+        <main>
+            <section id="about-me">
+                <div class="about-me-container">
+                    <div class="about-me-text-container">
+                        <h2>About Me</h2>
+                        <p>
+                            Hello, I'm Francisco Gomez, and welcome to my first personal
+                            blog where I'll share my interests and various experiences.
+
+                        </p>
+                        <p>
+                            I'm passionate about diving into new technologies and expanding 
+                            my knowledge. During my spare time, you'll often find me engrossed 
+                            in technology books or catching up on the latest shows on Netflix. 
+                            My keen interest lies in the realms of security and cloud computing.
+                        </p>
+                        <p>
+                            Looking ahead, I'm excited about the prospect of creating my own 
+                            unique projects involving circuit boards and delving into the world 
+                            of IoT (Internet of Things). 
+                        </p>
+                        <p>
+                            Counter: 
+                            <span id="time-container">0</span> seconds!
+                        </p>
+                    </div>
+                    <img 
+                      src="./ardilla.png"
+                      alt="My Photo"
+                      class="portrait card"
+                    >
+                </div>
+            </section>
+		
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>Web Scraping App</h3>
+                    </summary>
+                    <img 
+                      src="./WebScrape.PNG"
+                      class="project-image card"
+                      />
+                    <p>
+                        This is the description of the Web Scraping App
+                    </p>
+                </details>
+
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>The TLS Cert Checker</h3>
+                    </summary>
+                    <img 
+                      src="./TlsCertificate.PNG"
+                      class="project-image card"
+                      />
+                    <p>
+                        This is the description of Web TLS Checker
+                    </p>
+                </details>
+
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>My WebRTC Server</h3>
+                    </summary>
+                    <img 
+                      src="WebRtc.PNG"
+                      class="project-image card"
+                      />
+                    <p>
+			
+                        I've split this into two parts - <u><a href="http://143.110.158.78:4000">instant message server</a></u>.
+			And a <u><a href="http://143.110.158.78:3000">video chat server</a></u>.
+                    </p>
+                </details>
+
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>The OpenCV App</h3>
+                    </summary>
+                    <img 
+                      src="Opencv.PNG"
+                      class="project-image card"
+                      />
+                    <p>
+                        This is the OpenCV App
+                    </p>
+                </details>
+
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>Javascript Games</h3>
+                    </summary>
+                    <img
+                      src="Videogame.PNG"
+                      class="project-image card"
+                      />
+                    <p>
+                        This is a Videogame made with javascript
+                    </p>
+                </details>
+
+            </section>
+	
+	      
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <div id="skills-container">
+                    
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-react"></i>
+                    <i class="fab fa-aws"></i>
+                    <i class="fas fa-network-wired"></i>
+                    <i class="fab fa-linux"></i>
+                    <i>WebRTC</i>
+                    <i class="fab fa-npm"></i>
+                    <i class="fab fa-node"></i>
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-python"></i>
+            
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!--Made in Leon with <span class="heart">♥</span>-->
+        </footer>
+    </div>
+    </body>
+    <script>
+        const timeContainer = document.getElementById("time-container");
+        const FIRST_DAY = "12-10-2020";
+        const FIRST_DAY_DATE = new Date(FIRST_DAY);
+        const intLNumberFormatter = new Intl.NumberFormat("en-US");
+
+        setInterval(() => {
+            const now = new Date();
+            const difference = Math.floor((now.getTime() - FIRST_DAY_DATE.getTime()) / 1000);
+
+            // Update the timeContainer element with the calculated difference
+            timeContainer.innerText = intLNumberFormatter.format(difference);
+        }, 1000);
+
+    </script>
+</html>
+
+<!--@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");-->
